@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favico/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favico/site.webmanifest">
+    <link rel="mask-icon" href="./assets/img/favico/safari-pinned-tab.svg" color="#7f63f4">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/styles/css/main.css" />
+    <!-- <link rel="stylesheet" href="assets/styles/css/bootstrap.css" /> -->
+
+    <title>Gleek</title>
+</head>
+<body class="container-fluid position-relative">
+    <!-- <div class=""> -->
+        <header class="position-sticky top-0 start-0 d-flex justify-content-start align-items-center flex-row flex-nowrap z-1">
+            <div id="asideHeader" class="bg-indigo d-flex justify-content-between alig-items-center flex-row flex-nowrap px-3">
+                <a href="index.html" class="h-100px d-flex justify-content-start align-items-center flex-row flex-nowrap ">
+                    <div  class="h-54px w-54px d-flex justify-content-center align-items-center bg-white rounded-circle">
+                        <img src="./assets/img/icons/logo.png" alt="logo" class="h-30px w-30px">
+                    </div>
+                    <div class="ms-2 fw-extrabold fs-26px text-white">Gleek</div>
+                </a>
+    
+                <div class="h-100px d-flex justify-content-center align-items-center flex-row flex-nowrap">
+                    <i class="fa-solid fa-bars fs-26px text-white"></i>
+                </div>
+            </div>
+    
+            <div id="rightHeader" class="h-100 flex-grow-1 pe-3">
+                <div class="h-100 w-100 d-flex justify-content-end align-items-center flex-row flex-nowrap gap-4">
+                    <!-- notification -->
+                    <div class="position-relative w-fit">
+                        <i class="fa-solid fa-bell text-secondary fs-26px"></i>
+                        <div class="position-absolute top-0 start-100 translate-middle h-18px w-18px bg-indigo rounded-circle border border-3 border-secondary-subtle"></div>
+                    </div>
+
+                    <!-- name & img -->
+                    <div class="dropdown">
+                        <div id="profileDetails" class="cursor-pointer d-flex align-items-center gap-2" data-bs-toggle="dropdown">
+                            <div class="h-50px w-50px bg-blue border border-3 border-secondary-subtle rounded-circle overflow-hidden d-flex justify-content-center align-items-center">
+                            </div>
+                            <div class="text-secondary fw-extrabold"> George Martin </div>
+                        </div>
+
+                        <ul class="dropdown-menu mt-3 py-0 overflow-hidden">
+                            <li><a class="dropdown-item" href="#">계정 정보</a></li>
+                            <li><a class="dropdown-item" href="#">멤버십</a></li>
+                            <li><a class="dropdown-item" href="#">로그아웃</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- menu -->
+                    <div class="h-100 d-flex justify-content-center align-items-center flex-row flex-nowrap">
+                        <i class="fa-solid fa-bars fs-26px text-secondary-emphasis"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+    <!-- </div> -->
+
+    <div id="afterHeader" class="z-0 position-relative">
+        <aside class="position-fixed top-0 start-0 mt-100px">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <!-- menu structure -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="plain-accordion-btn" type="button">
+                            대시보드
+                        </button>
+                    </h2>
+                </div>
+
+                <!-- insight -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#asideFlush01" aria-expanded="false" aria-controls="asideFlush01">
+                            인사이트
+                        </button>
+                    </h2>
+                    <div id="asideFlush01" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <button class="btn nav-link">블로그 상태</button>
+                            <button class="btn nav-link">블로그 지수</button>
+                            <button class="btn nav-link">블로그 진단</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Revenue management -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#asideFlush02" aria-expanded="false" aria-controls="asideFlush02">
+                            수익 관리
+                        </button>
+                    </h2>
+                    <div id="asideFlush02" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <button class="btn nav-link">수익 가계부</button>
+                            <button class="btn nav-link">대행사 관리</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- keyword -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#asideFlush03" aria-expanded="false" aria-controls="asideFlush03">
+                            키워드
+                        </button>
+                    </h2>
+                    <div id="asideFlush03" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <button class="btn nav-link">키워드 조회</button>
+                            <button class="btn nav-link">간편 키워드 조회</button>
+                            <button class="btn nav-link">대량 키워드 조회</button>
+                            <button class="btn nav-link">스마트 블럭 조회</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- influencer -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#asideFlush04" aria-expanded="false" aria-controls="asideFlush04">
+                            인플루언서
+                        </button>
+                    </h2>
+                    <div id="asideFlush04" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <button class="btn nav-link">키워드챌린지 조회</button>
+                            <button class="btn nav-link">키워드챌린지 분석</button>
+                            <button class="btn nav-link">키워드챌린지 목록</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- membership -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#asideFlush05" aria-expanded="false" aria-controls="asideFlush05">
+                            멤버십
+                        </button>
+                    </h2>
+                    <div id="asideFlush05" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <button class="btn nav-link">멤버십 구매</button>
+                            <button class="btn nav-link">멤버십 상태</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main style="margin-left: 330px;">
+            <!-- breadcamp -->
+            <section class="p-3 mb-4" style="background: #E8E8F9">
+                <p class="fw-extrabold">보리의 Daily Life <- 블로그 명이 표시됩니다.</p>
+            </section>
+
+            <!-- cards -->
+            <section class="mb-4">
+                <div class="row g-4">
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between align-items-start flex-column">
+                                <h1 class="fw-extrabold text-blue">1,302</h1>
+                                <p class="fw-extrabold fs-18px" style="color: #ABAFB3">
+                                    일일 방문자 수
+                                </p>
+                            </div>
+    
+                            <img src="./assets/img/icons/peopleBlue.svg" alt="">
+                        </div>
+                    </div>
+    
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between align-items-start flex-column">
+                                <h1 class="fw-extrabold text-red">1,205</h1>
+                                <p class="fw-extrabold fs-18px" style="color: #ABAFB3">
+                                    평균 방문자 수
+                                </p>
+                            </div>
+    
+                            <img src="./assets/img/icons/peopleRed.svg" alt="">
+                        </div>
+                    </div>
+    
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between align-items-start flex-column">
+                                <h1 class="fw-extrabold text-yellow">1,203,502</h1>
+                                <p class="fw-extrabold fs-18px" style="color: #ABAFB3">
+                                    누적 방문자 수
+                                </p>
+                            </div>
+    
+                            <img src="./assets/img/icons/peopleYellow.svg" alt="">
+                        </div>
+                    </div>
+    
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="d-flex justify-content-between align-items-center flex-row">
+                                <img src="./assets/img/icons/box.svg" alt="" class="h-52px">
+                                <div class="ms-3 d-flex justify-content-between align-items-start flex-column">
+                                    <p class="fw-extrabold fs-30px" style="color: #00A2FF">
+                                        최적화 1
+                                    </p>
+                                    <p class="fw-extrabold fs-15px" style="color: #6A707E">
+                                        블로그 지수
+                                    </p>
+                                </div>
+                            </div>
+    
+                            <div class="d-flex justify-content-between align-items-center flex-row">
+                                <img src="./assets/img/icons/truck.svg" alt="" class="h-52px">
+                                <div class="ms-3 d-flex justify-content-between align-items-start flex-column">
+                                    <p class="fw-extrabold fs-30px text-green">
+                                        350개
+                                    </p>
+                                    <p class="fw-extrabold fs-15px" style="color: #6A707E">
+                                        블로그 지수
+                                    </p>
+                                </div>
+                            </div>
+    
+                            <div class="d-flex justify-content-between align-items-center flex-row">
+                                <img src="./assets/img/icons/taskList.svg" alt="" class="h-52px">
+                                <div class="ms-3 d-flex justify-content-between align-items-start flex-column">
+                                    <p class="fw-extrabold fs-30px text-pink">
+                                        0
+                                    </p>
+                                    <p class="fw-extrabold fs-15px" style="color: #6A707E">
+                                        블로그 지수
+                                    </p>
+                                </div>
+                            </div>
+    
+                            <div class="d-flex justify-content-between align-items-center flex-row">
+                                <img src="./assets/img/icons/hand.svg" alt="" class="h-52px">
+                                <div class="ms-3 d-flex justify-content-between align-items-start flex-column">
+                                    <p class="fw-extrabold fs-30px text-orange">
+                                        3,750
+                                    </p>
+                                    <p class="fw-extrabold fs-15px" style="color: #6A707E">
+                                        이웃 수
+                                    </p>
+                                </div>
+                            </div>
+    
+                            <div class="d-flex justify-content-between align-items-center flex-row">
+                                <img src="./assets/img/icons/hand.svg" alt="" class="h-52px">
+                                <div class="ms-3 d-flex justify-content-between align-items-start flex-column">
+                                    <p class="fw-extrabold fs-30px text-orange">
+                                        12,300
+                                    </p>
+                                    <p class="fw-extrabold fs-15px" style="color: #6A707E">
+                                        구독자 수
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- charts -->
+            <section class="mb-4">
+                <div class="row g-4">
+
+                    <!--  area -->
+                    <div class="col-7">
+                        <div class="charts">
+                            <h5 class="fw-extrabold" style="color:#464A53; ">주간 방문자 추이</h5>
+                            <div id="areaChart" class="w-100"> </div>
+                        </div>
+                    </div>
+
+                    <!-- donut -->
+                    <div class="col-5">
+                        <div class="charts">
+                            <h5 class="fw-extrabold" style="color:#464A53; ">주제 통계</h5>
+                            <div id="donutChart" class="w-100">  </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- table -->
+            <section class="w-100 mb-4">
+                <h6 class="fw-extrabold text-secondary-emphasis mb-3">최근 포스팅</h6>
+                <div class="w-100 table-responsive">
+                    <table class="table table-borderless align-middle">
+                        <thead>
+                            <tr class="text-center">
+                                <th class="fw-extrabold">#날짜</th>
+                                <th class="fw-extrabold">제목</th>
+                                <th class="fw-extrabold">신뢰성</th>
+                                <th class="fw-extrabold">연관성</th>
+                                <th class="fw-extrabold">최신성</th>
+                                <th class="fw-extrabold">글자수</th>
+                                <th class="fw-extrabold">이미지</th>
+                                <th class="fw-extrabold">공감</th>
+                                <th class="fw-extrabold">댓글</th>
+                                <th class="fw-extrabold">지수</th>
+                                <th class="fw-extrabold">노출 상태</th>
+                            </tr>
+                        </thead>
+
+                        <tbody style="color: #6A707E;">
+                            <tr class="bg-white fw-extrabold shadow-sm text-center">
+                                <td class="rounded-start">23.05.02</td>
+                                <td>
+                                    가정용 CCTV 추천, 혼자 설치, 스마트폰 앱 핸드폰 어플 지원하는 아피타임 홈CCTV
+                                </td>
+                                <td>95.27</td>
+                                <td>95.27</td>
+                                <td>95.27</td>
+                                <td>1523</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>3</td>
+                                <td>
+                                    <button type="button" class="btn btn-red rounded-pill text-white fw-extrabold btn-sm px-3">
+                                        최적
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-red rounded-pill text-white fw-extrabold btn-sm px-3">
+                                        누락
+                                    </button>
+                                </td>
+                            </tr>
+    
+                            <tr class="py-3"> 
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="bg-white fw-extrabold shadow-sm text-center">
+                                <td class="rounded-start">23.05.02</td>
+                                <td>
+                                    가정용 CCTV 추천, 혼자 설치, 스마트폰 앱 핸드폰 어플 지원하는 아피타임 홈CCTV
+                                </td>
+                                <td>95.27</td>
+                                <td>95.27</td>
+                                <td>95.27</td>
+                                <td>1523</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>3</td>
+                                <td>
+                                    <button type="button" class="btn btn-red rounded-pill text-white fw-extrabold btn-sm px-3">
+                                        최적
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-red rounded-pill text-white fw-extrabold btn-sm px-3">
+                                        누락
+                                    </button>
+                                </td>
+                            </tr>
+    
+                            <tr class="py-3"> 
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="bg-white fw-extrabold shadow-sm text-center">
+                                <td class="rounded-start">23.05.02</td>
+                                <td>
+                                    가정용 CCTV 추천, 혼자 설치, 스마트폰 앱 핸드폰 어플 지원하는 아피타임 홈CCTV
+                                </td>
+                                <td>95.27</td>
+                                <td>95.27</td>
+                                <td>95.27</td>
+                                <td>1523</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>3</td>
+                                <td>
+                                    <button type="button" class="btn btn-red rounded-pill text-white fw-extrabold btn-sm px-3">
+                                        최적
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-red rounded-pill text-white fw-extrabold btn-sm px-3">
+                                        누락
+                                    </button>
+                                </td>
+                            </tr>
+    
+                            <tr class="py-3"> 
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+    
+
+    
+                        </tbody>
+                    </table>
+
+                </div>
+            </section>
+
+
+        </main>
+    </div>
+
+
+    <!-- JAVASCRIPTS -->
+    <script src="./assets/vendors/mustache/mustache.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/mustache@4.2.0/mustache.js"></script>
+    <script src="./assets/vendors/fontawesome-pro/fontawesome-pro.js"></script>
+    <script src="./assets/js/charts.js"></script>
+</body>
+</html>

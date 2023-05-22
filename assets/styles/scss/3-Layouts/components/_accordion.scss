@@ -1,0 +1,119 @@
+aside {
+    .accordion {
+        // border: 1px solid red;
+        background-color: $transparent !important;
+    
+        .accordion-item {
+            border: 0;
+            @include mp-(0);
+            background-color: $white !important;
+            text-align: left;
+    
+            .accordion-header {
+                background-color: $white !important;
+                width: 100% !important;
+                display: block !important;
+                line-height: normal !important;
+                overflow: hidden !important;
+
+                .plain-accordion-btn {
+                    padding: 1rem 1.25rem !important;
+
+                    width: 100% !important;
+                    font-size: 1rem;
+                    font-family: $font-nanum;
+                    font-weight: 700 !important;
+                    text-align: left;
+                    
+                    background-color: $transparent !important;
+                    transition: 0.5s;
+                    overflow: hidden;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    border: 0;
+                    border-left: 4px solid $white !important;
+                    border-radius: 0;
+                    overflow-anchor: none;
+
+                    &:hover, &.active {
+                        border-left: 4px solid $indigo !important;
+                        background-color: #F3F1FA !important;
+                        color: $indigo !important;
+                    }
+                }
+
+                .accordion-button {
+                    font-family: $font-nanum;
+                    padding: 1rem 1.25rem !important;
+                    background-color: $transparent !important;
+                    overflow: hidden;
+                    text-align: left !important;
+                    font-weight: 700 !important;
+                    border-left: 4px solid $white !important;
+
+                    &:not(.collapsed), &.active {
+                        border-left: 4px solid $white !important;
+                        color: $indigo;
+                        background-color: #F3F1FA !important;
+                        box-shadow: 0 0 0 0 $transparent !important;
+                    }
+    
+                    &:hover {
+                        border-left: 4px solid $indigo !important;
+                        background-color: #F3F1FA !important;
+                        color: $indigo !important;
+    
+                        &::after {
+                            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237F63F4'%3e%3cpath fill-rule='evenodd' transform='rotate%28-90 8 8%29' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                        }
+                    }
+    
+                    &:not(.collapsed)::after {
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237F63F4'%3e%3cpath fill-rule='evenodd' transform='rotate%28-90 8 8%29' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                    }
+    
+                    &::after { }
+    
+                    &:focus {
+                        z-index: 3;
+                        border-color: $transparent;
+                        outline: 0;
+                        box-shadow: 0 0 0 0 $transparent !important;
+                    }
+                }
+            }
+    
+            .accordion-collapse {
+                @include mp-(0);
+                background-color: $transparent !important;
+            }
+    
+            .accordion-body {
+                background-color: #FAFAFA !important;
+                padding: 0 !important;
+                font-weight: 700;
+
+                .nav-link {
+                    width: 100%;
+                    padding-top: 0.6rem;
+                    padding-bottom: 0.6rem; 
+                    padding-left: 3rem;
+                    text-align: start;
+                    display: block !important;
+                    color: $dark;
+                    transition: 0.5s;
+                    border-radius: 0;
+                    border-left: 4px solid #FAFAFA !important;
+                    
+                    &:hover,
+                    &.active {
+                        border-left: 4px solid $indigo !important;
+                        color: $indigo;
+                        background-color: #F3F1FA;
+                    }
+                }
+            }
+        }
+    }
+}

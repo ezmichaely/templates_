@@ -1,0 +1,28 @@
+.charts {
+    height: 400px;
+    background-color: $white;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: $s3;
+    border: 0;
+    border-radius: $s1;
+
+    .apexcharts-toolbar {
+        display: none !important;
+    }
+
+    &:hover {
+        box-shadow: 0 0.15rem .25rem rgba(0, 0, 0, 0.4) !important;
+    }
+
+    // &:hover {
+    //     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1) !important;
+    // }
+
+    #donutChart {
+        // height: ;
+        font-weight: 700;
+    }
+}

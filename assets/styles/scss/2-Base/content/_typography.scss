@@ -1,0 +1,55 @@
+@for $i from $min-num through $max-num {
+  .fs-#{$i} {
+    font-size: $i;
+  }
+}
+
+.font-nanum {
+  font-family: $font-nanum;
+}
+
+// font weights
+.fw-thin {
+  // font-family: "Apple SD Gothic Neo", sans-serif;
+  font-weight: 100 !important;
+}
+
+.fw-ultralight {
+  // font-family: "Apple SD Gothic Neo", sans-serif;
+  font-weight: 200 !important;
+}
+
+.fw-light {
+  // font-family: "Apple SD Gothic Neo", sans-serif;
+  font-weight: 300 !important;
+}
+
+.fw-regular {
+  // font-family: "Apple SD Gothic Neo", sans-serif;
+  font-weight: 400 !important;
+}
+
+.fw-medium {
+  // font-family: "Apple SD Gothic Neo", sans-serif;
+  font-weight: 500 !important;
+}
+
+.fw-semibold {
+  // font-family: "Apple SD Gothic Neo", sans-serif;
+  font-weight: 600 !important;
+}
+
+.fw-solid {
+  // font-family: "Apple SD Gothic Neo", sans-serif;
+  font-weight: 700 !important;
+}
+
+.fw-extrabold {
+  // font-family: "Apple SD Gothic Neo", sans-serif;
+  font-weight: 800 !important;
+}
+
+.fw-heavy {
+  // font-family: "Apple SD Gothic Neo", sans-serif;
+  font-weight: 900 !important;
+}

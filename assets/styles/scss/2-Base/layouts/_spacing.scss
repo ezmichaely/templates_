@@ -1,0 +1,54 @@
+// loop through the range and generate classes for all four sides
+@for $i from $min-num through $max-num {
+    .mt-#{$i} {
+        margin-top: $i;
+    }
+    .mb-#{$i} {
+        margin-bottom: $i;
+    }
+    .me-#{$i} {
+        margin-right: $i;
+    }
+    .ms-#{$i} {
+        margin-left: $i;
+    }
+    .mx-#{$i} {
+        margin-left: $i;
+        margin-right: $i;
+    }
+    .my-#{$i} {
+        margin-top: $i;
+        margin-bottom: $i;
+    }
+
+    .m-#{$i} {
+        margin: $i;
+    }
+}
+
+@for $i from $min-num through $max-num {
+    .pt-#{$i} {
+        padding-top: $i;
+    }
+    .pb-#{$i} {
+        padding-bottom: $i;
+    }
+    .pe-#{$i} {
+        padding-right: $i;
+    }
+    .ps-#{$i} {
+        padding-left: $i;
+    }
+    .px-#{$i} {
+        padding-left: $i;
+        padding-right: $i;
+    }
+    .py-#{$i} {
+        padding-top: $i;
+        padding-bottom: $i;
+    }
+
+    .p-#{$i} {
+        padding: $i;
+    }
+}

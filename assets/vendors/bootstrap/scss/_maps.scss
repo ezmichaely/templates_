@@ -1,0 +1,221 @@
+// Re-assigned maps
+//
+// Placed here so that others can override the default Sass maps and see automatic updates to utilities and more.
+
+// scss-docs-start theme-colors-rgb
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
+// scss-docs-end theme-colors-rgb
+
+// scss-docs-start theme-text-map
+$theme-colors-text: (
+  "blue": $blue-text-emphasis,
+  "secondary": $secondary-text-emphasis,
+  "green": $green-text-emphasis,
+  "cyan": $cyan-text-emphasis,
+  "orange": $orange-text-emphasis,
+  "yellow": $yellow-text-emphasis,
+  "red": $red-text-emphasis,
+  "purple": $purple-text-emphasis,     
+  "pink":$pink-text-emphasis,         
+  "indigo":$indigo-text-emphasis,   
+  "teal":$teal-text-emphasis, 
+  "light": $light-text-emphasis,
+  "dark": $dark-text-emphasis,
+) !default;
+// scss-docs-end theme-text-map
+
+// scss-docs-start theme-bg-subtle-map
+$theme-colors-bg-subtle: (
+  "blue": $blue-bg-subtle,
+  "secondary": $secondary-bg-subtle,
+  "green": $green-bg-subtle,
+  "cyan": $cyan-bg-subtle,
+  "orange": $orange-bg-subtle,
+  "yellow": $yellow-bg-subtle,
+  "red": $red-bg-subtle,
+  "purple": $purple-bg-subtle,     
+  "pink":$pink-bg-subtle,         
+  "indigo":$indigo-bg-subtle,   
+  "teal":$teal-bg-subtle, 
+  "light": $light-bg-subtle,
+  "dark": $dark-bg-subtle,
+) !default;
+// scss-docs-end theme-bg-subtle-map
+
+// scss-docs-start theme-border-subtle-map
+$theme-colors-border-subtle: (
+  "blue": $blue-border-subtle,
+  "secondary": $secondary-border-subtle,
+  "green": $green-border-subtle,
+  "cyan": $cyan-border-subtle,
+  "orange": $orange-border-subtle,
+  "yellow": $yellow-border-subtle,
+  "red": $red-border-subtle,
+  "purple": $purple-border-subtle,     
+  "pink":$pink-border-subtle,         
+  "indigo":$indigo-border-subtle,   
+  "teal":$teal-border-subtle, 
+  "light": $light-border-subtle,
+  "dark": $dark-border-subtle,
+) !default;
+// scss-docs-end theme-border-subtle-map
+
+$theme-colors-text-dark: null !default;
+$theme-colors-bg-subtle-dark: null !default;
+$theme-colors-border-subtle-dark: null !default;
+
+@if $enable-dark-mode {
+  // scss-docs-start theme-text-dark-map
+  $theme-colors-text-dark: (
+    "blue": $blue-text-emphasis-dark,
+    "secondary": $secondary-text-emphasis-dark,
+    "green": $green-text-emphasis-dark,
+    "cyan": $cyan-text-emphasis-dark,
+    "orange": $orange-text-emphasis-dark,
+    "yellow": $yellow-text-emphasis-dark,
+    "red": $red-text-emphasis-dark,
+    "purple": $purple-text-emphasis-dark,
+    "pink":$pink-text-emphasis-dark,    
+    "indigo":$indigo-text-emphasis-dark,  
+    "teal":$teal-text-emphasis-dark,
+
+    "light": $light-text-emphasis-dark,
+    "dark": $dark-text-emphasis-dark,
+  ) !default;
+  // scss-docs-end theme-text-dark-map
+
+  // scss-docs-start theme-bg-subtle-dark-map
+  $theme-colors-bg-subtle-dark: (
+    "blue": $blue-bg-subtle-dark,
+    "secondary": $secondary-bg-subtle-dark,
+    "green": $green-bg-subtle-dark,
+    "cyan": $cyan-bg-subtle-dark,
+    "orange": $orange-bg-subtle-dark,
+    "yellow": $yellow-bg-subtle-dark,
+    "red": $red-bg-subtle-dark,
+    "purple": $purple-bg-subtle-dark,
+    "pink":$pink-bg-subtle-dark,    
+    "indigo":$indigo-bg-subtle-dark,  
+    "teal":$teal-bg-subtle-dark,
+    "light": $light-bg-subtle-dark,
+    "dark": $dark-bg-subtle-dark,
+  ) !default;
+  // scss-docs-end theme-bg-subtle-dark-map
+
+  // scss-docs-start theme-border-subtle-dark-map
+  $theme-colors-border-subtle-dark: (
+    "blue": $blue-border-subtle-dark,
+    "secondary": $secondary-border-subtle-dark,
+    "green": $green-border-subtle-dark,
+    "cyan": $cyan-border-subtle-dark,
+    "orange": $orange-border-subtle-dark,
+    "yellow": $yellow-border-subtle-dark,
+    "red": $red-border-subtle-dark,
+    "purple": $purple-border-subtle-dark,
+    "pink":$pink-border-subtle-dark,    
+    "indigo":$indigo-border-subtle-dark,  
+    "teal":$teal-border-subtle-dark,
+    "light": $light-border-subtle-dark,
+    "dark": $dark-border-subtle-dark,
+  ) !default;
+  // scss-docs-end theme-border-subtle-dark-map
+}
+
+// Utilities maps
+//
+// Extends the default `$theme-colors` maps to help create our utilities.
+
+// Come v6, we'll de-dupe these variables. Until then, for backward compatibility, we keep them to reassign.
+// scss-docs-start utilities-colors
+$utilities-colors: $theme-colors-rgb !default;
+// scss-docs-end utilities-colors
+
+// scss-docs-start utilities-text-colors
+$utilities-text: map-merge(
+  $utilities-colors,
+  (
+    "black": to-rgb($black),
+    "white": to-rgb($white),
+    "body": to-rgb($body-color)
+  )
+) !default;
+$utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text") !default;
+
+$utilities-text-emphasis-colors: (
+  "blue-emphasis": var(--#{$prefix}blue-text-emphasis),
+  "secondary-emphasis": var(--#{$prefix}secondary-text-emphasis),
+  "green-emphasis": var(--#{$prefix}green-text-emphasis),
+  "cyan-emphasis": var(--#{$prefix}cyan-text-emphasis),
+  "orange-emphasis": var(--#{$prefix}orange-text-emphasis),
+  "yellow-emphasis": var(--#{$prefix}yellow-text-emphasis),
+  "red-emphasis": var(--#{$prefix}red-text-emphasis),
+  "purple-emphasis": var(--#{$prefix}purple-text-emphasis),
+  "pink-emphasis":var(--#{$prefix}pink-text-emphasis),
+  "indigo-emphasis":var(--#{$prefix}indigo-text-emphasis),
+  "teal-emphasis":var(--#{$prefix}teal-text-emphasis),
+  "light-emphasis": var(--#{$prefix}light-text-emphasis),
+  "dark-emphasis": var(--#{$prefix}dark-text-emphasis),
+  
+) !default;
+// scss-docs-end utilities-text-colors
+
+// scss-docs-start utilities-bg-colors
+$utilities-bg: map-merge(
+  $utilities-colors,
+  (
+    "black": to-rgb($black),
+    "white": to-rgb($white),
+    "body": to-rgb($body-bg)
+  )
+) !default;
+$utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg") !default;
+
+$utilities-bg-subtle: (
+  "blue-subtle": var(--#{$prefix}blue-bg-subtle),
+  "secondary-subtle": var(--#{$prefix}secondary-bg-subtle),
+  "green-subtle": var(--#{$prefix}green-bg-subtle),
+  "cyan-subtle": var(--#{$prefix}cyan-bg-subtle),
+  "orange-subtle": var(--#{$prefix}orange-bg-subtle),
+  "yellow-subtle": var(--#{$prefix}yellow-bg-subtle),
+  "red-subtle": var(--#{$prefix}red-bg-subtle),
+  "purple-subtle": var(--#{$prefix}purple-bg-subtle),
+  "pink-subtle":var(--#{$prefix}pink-bg-subtle),
+  "indigo-subtle":var(--#{$prefix}indigo-bg-subtle),
+  "teal-subtle":var(--#{$prefix}teal-bg-subtle),
+  "light-subtle": var(--#{$prefix}light-bg-subtle),
+  "dark-subtle": var(--#{$prefix}dark-bg-subtle),
+) !default;
+// scss-docs-end utilities-bg-colors
+
+// scss-docs-start utilities-border-colors
+$utilities-border: map-merge(
+  $utilities-colors,
+  (
+    "black": to-rgb($black),
+    "white": to-rgb($white)
+  )
+) !default;
+$utilities-border-colors: map-loop($utilities-border, rgba-css-var, "$key", "border") !default;
+
+$utilities-border-subtle: (
+  "blue-subtle": var(--#{$prefix}blue-border-subtle),
+  "secondary-subtle": var(--#{$prefix}secondary-border-subtle),
+  "green-subtle": var(--#{$prefix}green-border-subtle),
+  "cyan-subtle": var(--#{$prefix}cyan-border-subtle),
+  "orange-subtle": var(--#{$prefix}orange-border-subtle),
+  "yellow-subtle": var(--#{$prefix}yellow-border-subtle),
+  "red-subtle": var(--#{$prefix}red-border-subtle),
+  "purple-subtle": var(--#{$prefix}purple-border-subtle),
+  "pink-subtle":var(--#{$prefix}pink-border-subtle),
+  "indigo-subtle":var(--#{$prefix}indigo-border-subtle),
+  "teal-subtle":var(--#{$prefix}teal-border-subtle),
+  "light-subtle": var(--#{$prefix}light-border-subtle),
+  "dark-subtle": var(--#{$prefix}dark-border-subtle)
+) !default;
+// scss-docs-end utilities-border-colors
+
+$utilities-links-underline: map-loop($utilities-colors, rgba-css-var, "$key", "link-underline") !default;
+
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
+
+$gutters: $spacers !default;

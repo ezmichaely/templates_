@@ -1,0 +1,6 @@
+@for $i from $min-num through $max-num {
+    .hr-#{$i} {
+        height: $i !important;
+        width: 100% !important;
+    }
+}

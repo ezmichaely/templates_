@@ -1,0 +1,15 @@
+#afterHeader {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    main {
+        padding: $s4;
+        flex-grow: 1;
+        background: #F2F5F8;
+        min-height: calc(100vh - 100px);
+    }
+}

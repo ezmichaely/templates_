@@ -1,0 +1,79 @@
+.p-fluid {
+    @include px-($s5);
+
+    @include breakpoint-lg {
+        @include px-($s3);
+    }
+}
+
+.p-fluid2 {
+    @include px-(calc($s5 * 2));
+
+    @include breakpoint-lg {
+        @include px-(calc($s3 * 2));
+    }
+
+    @include breakpoint-md {
+        @include px-(0);
+    }
+}
+
+.p-fluid3 {
+    @include px-(calc($s5 * 3));
+
+    @include breakpoint-lg {
+        @include px-(calc($s3 * 3));
+    }
+
+    @include breakpoint-md {
+        @include px-(0);
+    }
+}
+
+.p-fluid4 {
+    @include px-(calc($s5 * 4));
+
+    @include breakpoint-lg {
+        @include px-(calc($s3 * 4));
+    }
+
+    @include breakpoint-md {
+        @include px-(0);
+    }
+}
+
+.p-fluid5 {
+    @include px-(calc($s5 * 5));
+
+    @include breakpoint-lg {
+        @include px-(calc($s3 * 5));
+    }
+
+    @include breakpoint-md {
+        @include px-(0);
+    }
+}
+
+.align-middle {
+    vertical-align: middle !important;
+}
+
+.md-column {
+    @include breakpoint-md-up {
+        flex-direction: row !important;
+    }
+
+    @include breakpoint-md {
+        flex-direction: column !important;
+    }
+}
+
+.row.row-cols-seven {
+    // width: 14.2857142857% !important;
+    // *width: 14.2857142857% !important;
+
+    .col-seven {
+        width: 14.2857142857% !important;
+        *width: 14.2857142857% !important;
+    }
+}

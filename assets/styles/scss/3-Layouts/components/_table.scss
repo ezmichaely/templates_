@@ -1,0 +1,90 @@
+// table {
+//     thead {
+//         tr {
+//             th {
+//                 white-space: nowrap !important;
+//             }
+//         }
+//     }
+// }
+
+// .table-zero {
+//     table {
+//         thead {
+//             th {
+//                 td {
+//                     white-space: nowrap;
+//                 }
+//             }
+//         }
+//         tbody {
+//             tr {
+//                 &:first-child {
+//                     white-space: nowrap !important;
+//                 }
+//                 td {
+//                     vertical-align: middle;
+
+//                     label {
+//                         margin: 0 !important;
+//                         padding: 0 !important;
+//                         display: flex !important;
+//                         justify-content: center !important;
+//                         align-items: center !important;
+//                         cursor: pointer;
+//                         height: 100%;
+//                         width: 100%;
+
+//                         input {
+//                             border-color: $birdflower !important;
+//                             margin-bottom: 4px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .table-col {
+//     table {
+//         background-color: $white;
+//         tbody {
+//             tr {
+//                 td {
+//                     vertical-align: middle;
+//                     max-width: calc(100% / 7) !important;
+//                     min-width: calc(100% / 7) !important;
+//                     width: calc(100% / 7) !important;
+
+//                     label {
+//                         margin: 0 !important;
+//                         padding: 0 !important;
+//                         display: flex !important;
+//                         justify-content: start !important;
+//                         align-items: center !important;
+//                         cursor: pointer;
+//                         height: 100%;
+//                         width: 100%;
+
+//                         .form-check-input {
+//                             border-color: $birdflower !important;
+//                             margin-bottom: 4px;
+//                         }
+
+//                         input {
+//                             border-color: $birdflower !important;
+//                         }
+
+//                         span {
+//                             user-select: none;
+//                             line-height: 1 !important;
+//                             margin-left: $s2;
+//                             white-space: nowrap;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

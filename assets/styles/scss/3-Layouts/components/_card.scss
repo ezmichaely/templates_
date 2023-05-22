@@ -1,0 +1,14 @@
+.card {
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: $s5;
+    border: 0;
+    border-radius: $s1;
+
+    &:hover {
+        box-shadow: 0 0.15rem .25rem rgba(0, 0, 0, 0.4) !important;
+    }
+}
